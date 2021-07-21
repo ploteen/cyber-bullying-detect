@@ -1,0 +1,2 @@
+rootProject.name = "Cyber bulling detect"
+include ':app'
