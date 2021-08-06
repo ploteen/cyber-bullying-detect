@@ -4,3 +4,7 @@ topic_model/*
 topic_model
 .vscode
 hate_speech_topic_dataset.csv
+nlp/all.tar
+.tmp.drivedownload
+.ipynb_checkpoints
+*.pt
