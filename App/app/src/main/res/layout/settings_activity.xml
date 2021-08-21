@@ -1,7 +1,63 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--도움을 요청하는 이미지 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginBottom="100dp"></ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
 
+        <TextView
+
+            android:layout_width="103dp"
+            android:layout_height="58dp"
+            android:layout_margin="0dp"
+            android:text="도움을 \n줄 수 있는 분"
+            android:textAlignment="center"></TextView>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="283dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"></EditText>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+            android:layout_width="103dp"
+            android:layout_height="58dp"
+            android:layout_margin="0dp"
+            android:text="전화번호"
+            android:textAlignment="center"></TextView>
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="283dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"></EditText>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="저장"
+        android:id="@+id/btn"></Button>
 
 </LinearLayout>
