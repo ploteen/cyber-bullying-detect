@@ -10,4 +10,4 @@ def classify():
     return str(model.predict(sentence)[0])
 
 if __name__ == "__main__" :
-    app.run()
+    app.run(host='0.0.0.0', port=30000, debug=True)
