@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,14 @@ public class ScoreActivity extends Fragment {
         preferences = PreferenceManager.getDefaultSharedPreferences(view.getContext());
         editor = preferences.edit();
         name = view.findViewById(R.id.helper_name);
+
+        //score 이미지 변경
+        SharedPreferences result = view.getContext().getSharedPreferences("classify", view.getContext().MODE_PRIVATE);
+        int total =  result.getInt("total", 0);
+        int hate = result.getInt("hate", 0);
+        Log.d("score 이미지 변경", "total : " + Integer.toString(total)
+        + "hate : " + Integer.toString(hate));
+
         //name 바꾸기
         name.setText(preferences.getString("name","없음"));
         //helper button 바꾸기
