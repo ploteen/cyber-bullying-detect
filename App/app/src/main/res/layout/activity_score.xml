@@ -12,16 +12,15 @@
 
     <ImageView
         android:id="@+id/score_image"
-        android:layout_width="395dp"
-        android:layout_height="229dp"
-        android:layout_margin="10dp"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_width="wrap_content"
+        android:layout_height="271dp"
+        android:src="@drawable/low" />
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_marginBottom="10dp"/>
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/score_call" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,18 +30,20 @@
         <TextView
             android:id="@+id/helper_name"
             android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:text="임시"
             android:gravity="center"
-            android:textSize="60dp">
+            android:textSize="40dp">
         </TextView>
 
-        <Button
+        <ImageButton
             android:id="@+id/helper_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"></Button>
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/call"
+            android:background="@color/white"></ImageButton>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,18 +52,21 @@
         >
         <ImageView
             android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:text="1388 청소년 사이버상담센터"
             android:gravity="center"
-            android:textSize="60dp">
+            android:textSize="60dp"
+            android:src="@drawable/cyber">
         </ImageView>
 
-        <Button
+        <ImageButton
             android:id="@+id/police_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"></Button>
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:src="@drawable/call"></ImageButton>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -71,18 +75,21 @@
         >
         <ImageView
             android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:text="1388 청소년 사이버상담센터"
             android:gravity="center"
-            android:textSize="60dp">
+            android:textSize="60dp"
+            android:src="@drawable/police">
         </ImageView>
 
-        <Button
+        <ImageButton
             android:id="@+id/cyber_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"></Button>
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/call"
+            android:background="@color/white"></ImageButton>
     </LinearLayout>
 
 </LinearLayout>

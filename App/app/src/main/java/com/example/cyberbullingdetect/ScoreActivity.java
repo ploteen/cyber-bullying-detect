@@ -15,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ScoreActivity extends Fragment {
@@ -24,9 +26,10 @@ public class ScoreActivity extends Fragment {
     private SharedPreferences.Editor editor;
 
     private TextView name;
-    private Button helper_btn;
-    private Button cyber_btn;
-    private Button police_btn;
+    private ImageButton helper_btn;
+    private ImageButton cyber_btn;
+    private ImageButton police_btn;
+    private ImageView score_image;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,14 +38,21 @@ public class ScoreActivity extends Fragment {
         preferences = PreferenceManager.getDefaultSharedPreferences(view.getContext());
         editor = preferences.edit();
         name = view.findViewById(R.id.helper_name);
-
+        score_image = view.findViewById(R.id.score_image);
         //score 이미지 변경
         SharedPreferences result = view.getContext().getSharedPreferences("classify", view.getContext().MODE_PRIVATE);
         int total =  result.getInt("total", 0);
         int hate = result.getInt("hate", 0);
         Log.d("score 이미지 변경", "total : " + Integer.toString(total)
         + "hate : " + Integer.toString(hate));
-
+        int score;
+        if (total != 0)
+            score = hate / total * 100 ;
+        else
+            score = 0;
+        if (score >= 70) score_image.setImageResource(R.drawable.high);
+        else if (score >= 50) score_image.setImageResource(R.drawable.middle);
+        else score_image.setImageResource(R.drawable.low);
         //name 바꾸기
         name.setText(preferences.getString("name","없음"));
         //helper button 바꾸기

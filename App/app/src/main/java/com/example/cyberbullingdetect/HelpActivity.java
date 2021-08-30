@@ -21,11 +21,10 @@ public class HelpActivity extends Fragment {
     private LinearLayout layoutIndicator;
 
     private String[] images = new String[] {
-            "ic_launcher_background",
-            "ic_launcher_foreground",
-            "ic_launcher_background",
-            "ic_launcher_foreground",
-            "ic_launcher_background"
+            "helper_first",
+            "helper_second",
+            "helper_third",
+            "helper_fourth",
     };
     @Nullable
     @Override
